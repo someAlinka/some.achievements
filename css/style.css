@@ -1,0 +1,486 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@-webkit-keyframes hoverAchiev {
+  from {
+    opacity: 0;
+    z-index: 99;
+    left: 50%;
+  }
+  50% {
+    opacity: 1;
+    width: 100px;
+    left: 111%;
+  }
+  to {
+    opacity: 1;
+    width: 100px;
+    left: 111%;
+  }
+}
+@keyframes hoverAchiev {
+  from {
+    opacity: 0;
+    z-index: 99;
+    left: 50%;
+  }
+  50% {
+    opacity: 1;
+    width: 100px;
+    left: 111%;
+  }
+  to {
+    opacity: 1;
+    width: 100px;
+    left: 111%;
+  }
+}
+@-webkit-keyframes preloader {
+  from {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+  to {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes preloader {
+  from {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+  to {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+}
+html,
+body {
+  min-width: 320px;
+}
+body * {
+  font-family: 'Montserrat', sans-serif;
+  color: #494949;
+}
+a {
+  color: #89b8cf;
+  text-decoration: none;
+  border-bottom: 1px solid #89b8cf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+a:hover {
+  border-color: transparent;
+}
+.clear {
+  clear: both;
+  width: 100%;
+}
+/** header **/
+header,
+.user_content {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header:before {
+  content: "";
+  min-width: 320px;
+  background: #f3f8fa;
+  width: 100%;
+  height: 88px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.main_head {
+  margin: 20px auto;
+  padding: 0 15px;
+}
+.logo {
+  position: relative;
+  background: #f3f8fa;
+  color: #89b8cf;
+  font-weight: bold;
+  font-size: 22px;
+  width: 200px;
+  display: inline-block;
+  line-height: 1.1;
+  text-decoration: none;
+  border: none;
+}
+.logo:before {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 49px;
+  background: url(../img/template.png) -54px -40px no-repeat;
+  float: left;
+  margin-right: 15px;
+}
+.logout {
+  float: right;
+  border: 3px solid #b09eb7;
+  padding: 5px 9px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 7px;
+  color: #b09eb7;
+  font-weight: bold;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.logout:hover {
+  color: #f3f8fa;
+  background: #b09eb7;
+}
+/** end header **/
+/** content **/
+.main_wrapper {
+  border-top: 1px solid #dedede;
+}
+.user_content {
+  padding: 30px 15px;
+}
+.user_name {
+  font-size: 30px;
+  padding: 20px 0 10px;
+}
+.user_achiev {
+  padding-bottom: 90px;
+  border-left: 1px solid #dedede;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin: 30px 0 0 60px;
+}
+.user_achiev_title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  float: left;
+}
+.add_new_wrap {
+  float: right;
+  position: relative;
+}
+.add_new_wrap:before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  background: #ffffff;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  z-index: -9;
+}
+.add_new_wrap.js_disabled:before {
+  opacity: 0.8;
+  z-index: 9;
+}
+.achiev {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  box-shadow: inset 0 0 0 6px #b09eb7;
+  border-radius: 50%;
+}
+.achiev.new_achiev {
+  margin-right: 44px;
+}
+.achiev .achiev_img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+}
+.achiev .achiev_count {
+  color: #a091a6;
+  position: absolute;
+  bottom: 0;
+  left: 62%;
+  font-size: 19px;
+  background: #f7f5f8;
+  font-weight: bold;
+  min-width: 11px;
+  text-align: center;
+  border: 4px solid #b09eb7;
+  border-radius: 20px;
+  padding: 7px 11px;
+  z-index: 2;
+}
+.achiev .achiev_count:before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #f7f5f8;
+  width: 90px;
+  height: 90px;
+  left: -61px;
+  bottom: 1px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.achiev .achiev_descr {
+  opacity: 0;
+  font-size: 12px;
+  border: 4px solid #b09eb7;
+  position: absolute;
+  border-radius: 10px;
+  z-index: -99;
+  padding: 12px;
+  background: #f7f5f8;
+  width: 50px;
+  left: 0;
+  bottom: 0;
+}
+.achiev .achiev_descr:after,
+.achiev .achiev_descr:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.achiev .achiev_descr:after {
+  border-color: transparent;
+  border-right-color: #f7f5f8;
+  border-width: 4px;
+  margin-top: -4px;
+}
+.achiev .achiev_descr:before {
+  border-color: transparent;
+  border-right-color: #a091a6;
+  border-width: 10px;
+  margin-top: -10px;
+}
+.achiev .achiev_descr span {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 5px;
+  display: block;
+}
+.achiev .achiev_descr span:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 65px;
+  position: absolute;
+  top: 50%;
+  margin-top: -32px;
+  left: -21px;
+}
+.achiev:hover .achiev_descr {
+  opacity: 1;
+  z-index: 99;
+  width: 100px;
+  left: 111%;
+  bottom: 50%;
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  -webkit-animation: hoverAchiev 0.5s ease-in-out;
+  animation: hoverAchiev 0.5s ease-in-out;
+}
+.template_achiev {
+  display: none;
+  box-shadow: none;
+  margin-right: 44px;
+  background: url(../img/template.png) -35px -13px no-repeat;
+}
+.template_achiev.js_visible {
+  display: inline-block;
+}
+.template_achiev:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: preloader 1s infinite ease-in-out;
+  animation: preloader 1s infinite ease-in-out;
+}
+.template_achiev .achiev_count {
+  display: none;
+}
+.template_achiev .achiev_descr {
+  border-color: #89b8cf;
+}
+@media (max-width: 768px) {
+  .add_new_wrap {
+    display: block;
+    float: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+/** end content **/
